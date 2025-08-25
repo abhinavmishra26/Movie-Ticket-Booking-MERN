@@ -8,7 +8,8 @@ const MovieCardUpcoming = ({movie}) => {
   const {image_base_url}=useAppContext();
     const navigate=useNavigate();
   return (
-    <div className='w-66 bg-gray-950 p-3 rounded-3xl border border-primary/50'>
+    <div className='w-66 bg-gray-950 p-3 rounded-2xl border border-primary/50 transition-transform duration-300 
+            hover:-translate-y-3 '>
       <img className='rounded-lg mb-2 h-50 object-cover cursor-pointer' src={image_base_url + movie.backdrop_path} onClick={()=>{navigate(`/movies/${movie._id}`);scrollTo(0,0)}}></img>
       <p className='mb-2 text-white font-semibold truncate' >{movie.title}</p>
       <div >

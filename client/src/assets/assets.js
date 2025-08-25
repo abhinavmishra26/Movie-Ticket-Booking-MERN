@@ -6,7 +6,7 @@ import screenImage from './screenImage.svg'
 import profile from './profile.png'
 import movieTicket from "./movieTicket.png"
 
-export const assets = {
+export const assets= {
     logo,
     marvelLogo,
     movieTicket,

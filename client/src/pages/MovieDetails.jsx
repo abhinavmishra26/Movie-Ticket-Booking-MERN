@@ -26,7 +26,7 @@ const MovieDetails = () => {
           Authorization:`Bearer ${await getToken()}`
         }
       })
-      console.log(data,"heyyy");
+    
       setShow({movie:data.movie, dateTime:data.dateTime,trailer:data.videoKey});
     }
     catch(error){
@@ -64,7 +64,7 @@ useEffect(() => {
 
   return show? (
     <div className='  md:px-40 md:pt-48 '>
-      <BlurCircle  left="400px " top='100px' />
+      <BlurCircle left='400px'  top='100px' />
       <div className='flex  flex-col  gap-8 mb-24 md:flex-row'>
         <img src={image_base_url+show.movie.poster_path} className='w-72 h-1/2 rounded-2xl ml-25 mt-30 md:ml-0 md:mt-0'></img>
         <div className='mx-6 mt-4=3 md:w-3/5 relative '>

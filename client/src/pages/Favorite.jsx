@@ -12,7 +12,7 @@ const Favorite = () => {
      <div className='w-full   mt-44 lg:px-46  ' >
 
       <BlurCircle top='200px 'left='50px'/>
-      <p className='text-lg mb-5'>Your Favorite Movies</p>
+      <p className='text-lg mb-5 mx-8 md:mx-0'>Your Favorite Movies</p>
       <div className='   px-28 md:px-0 flex  gap-8  flex-wrap '>
         {favoriteMovies.map((movie)=>
         <MovieCard key={movie._id} movie={movie}/>

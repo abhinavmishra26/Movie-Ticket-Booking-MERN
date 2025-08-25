@@ -184,7 +184,9 @@ const AddShows = () => {
    <button onClick={handleSubmit} disabled={addingShow} className='w-36 h-10 bg-primary cursor-pointer rounded-sm'>Add Show</button>
    </div>
   ):(
+    <div className='flex justify-center items-center'>
     <Loading/>
+    </div>
   )
 }
 

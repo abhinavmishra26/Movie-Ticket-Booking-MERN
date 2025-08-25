@@ -59,7 +59,7 @@ const Dashboard = () => {
   },[user])
 
   return !loading?(
-    <div className='px-8  py-10 overflow-hidden '>
+    <div className='px-8  py-10 overflow-hidden'>
       <BlurCircle top='70px' left='300px'/>
       <Title text1="Admin" text2="Dashboard" />
       <div className='flex gap-4 mb-10 flex-col md:flex-row' >
@@ -98,7 +98,7 @@ const Dashboard = () => {
       
     </div>
   ):(
-    <div className='flex justify-center'>
+     <div className='flex justify-center items-center  '>
     <Loading/>
     </div>
   )

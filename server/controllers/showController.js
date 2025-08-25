@@ -65,7 +65,6 @@ export const addShow=async(req,res)=>{
                 
             ]);
             const movieApiData=movieDetailsResponse.data;
-            console.log(movieApiData);
             const movieCreditsData=movieCreditsResponse.data;
             const movieDetails={
                 _id:movieId,

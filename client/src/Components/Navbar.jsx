@@ -49,7 +49,6 @@
 // }
 
 // export default Navbar
-
 import { LogIn, MenuIcon, SearchIcon, TicketPlus, XIcon } from 'lucide-react';
 import React, { useState } from 'react';
 import { assets } from '../assets/assets';
@@ -76,26 +75,22 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <div
-        className={`hidden md:flex gap-8 text-white font-medium`}
-      >
-        {["Home", "Movies", "Theaters", "Upcoming"].map((item, idx) => (
+      <div className={`hidden md:flex gap-8 text-white font-medium`}>
+        {["Home", "Movies", "Upcoming Movies"].map((item, idx) => (
           <Link
             key={idx}
             onClick={() => scrollTo(0, 0)}
-            to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+            to={item === "Home" ? "/" : item === "Upcoming Movies" ? "/upcoming" : `/${item.toLowerCase()}`}
             className="relative group"
           >
             {item}
             <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all"></span>
           </Link>
         ))}
-        {favoriteMovies.length > 0 && (
-          <Link to="/favorite" className="relative group">
-            Favorites
-            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all"></span>
-          </Link>
-        )}
+        <Link to="/favorite" className="relative group">
+          Favorites
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all"></span>
+        </Link>
       </div>
 
       {/* Right Side Icons / Login */}
@@ -135,29 +130,26 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
           className="self-end cursor-pointer hover:text-red-500 transition"
         />
-        {["Home", "Movies", "Theaters", "Upcoming"].map((item, idx) => (
+        {["Home", "Movies", "Upcoming Movies"].map((item, idx) => (
           <Link
             key={idx}
             onClick={() => setIsOpen(false)}
-            to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+            to={item === "Home" ? "/" : item === "Upcoming Movies" ? "/upcoming" : `/${item.toLowerCase()}`}
             className="text-lg hover:text-red-500 transition"
           >
             {item}
           </Link>
         ))}
-        {favoriteMovies.length > 0 && (
-          <Link
-            onClick={() => setIsOpen(false)}
-            to="/favorite"
-            className="text-lg hover:text-red-500 transition"
-          >
-            Favorites
-          </Link>
-        )}
+        <Link
+          onClick={() => setIsOpen(false)}
+          to="/favorite"
+          className="text-lg hover:text-red-500 transition"
+        >
+          Favorites
+        </Link>
       </div>
     </div>
   );
 };
 
 export default Navbar;
-

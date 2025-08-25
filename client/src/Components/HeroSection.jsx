@@ -13,10 +13,6 @@ const HeroSection = () => {
 
   const backgroundImages=[
     "/bg-12.jpg",
-    // "/bg-18.png",
-    // "/bg-3.jpg",
-    // "/bg-14.jpg",
-
    ];
 
    const [bgIndex, setBgIndex] = useState(0);
@@ -46,14 +42,9 @@ const HeroSection = () => {
       <p className='w-[700px]'>“Book tickets for the latest blockbusters and timeless classics in just a few seconds. Choose your cinema, pick your seats, and enjoy a seamless movie-going experience — anytime, anywhere.”
 
 </p>
-<button className=' flex  justify-center  items-center w-38 bg-red-500 h-10 cursor-pointer hover:bg-red-400 rounded py mt-4' onClick={()=>navigate("/movies")}>Explore Movies
+<button className=' flex  justify-center  items-center w-38 bg-red-500 h-10 cursor-pointer hover:bg-red-400 rounded py mt-4 font-semibold' onClick={()=>navigate("/movies")}>Explore Movies
   <ArrowRight className='w-5'/>
 </button>
-        <button
-          className='mt-4 ml-2 text-sm underline text-white'
-        >
-          Change Background
-        </button>
       </div>
 
       

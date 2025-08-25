@@ -8,7 +8,7 @@ import sendEmail from "../config/nodemailer.js";
 dotenv.config();
 export const inngest = new Inngest({
   id: "movie-reservation-app",
-  eventKey: process.env.INNGEST_EVENT_KEY, // 👈 required
+  eventKey: process.env.INNGEST_EVENT_KEY, 
 });
 
 
@@ -113,7 +113,7 @@ await sendEmail({
                 <strong>Total Amount : </strong> $${booking.amount}
               </p>
               <p>Enjoy the show! 🍿🥤</p>
-              <p>Thanks for booking with us!<br/> - RJP's QuickShow Team</p>
+              <p>Thanks for booking with us!<br/> - CseWorld's QuickShow Team</p>
             </div>`,
 
 })
@@ -171,8 +171,7 @@ const sendShowReminders= inngest.createFunction(
               timeZone: "Asia/Kolkata",
             })}</strong>.</p>
                 <p>It starts in approximately <strong>8 hours</strong> - make sure you're ready!</p><br />
-                <a href="rjp-quickshow.netlify.app">rjp-quickshow.netlify.app<a>
-                <p>Enjoy the show!<br/> RJP's QuickShow Team</p>
+                <p>Enjoy the show!<br/> CseWorld's QuickShow Team</p>
                 </div>
               `,
     }))
@@ -209,10 +208,8 @@ const sendNewShowNotifications = inngest.createFunction(
           <h2>Hey, ${userName}</h2>
           <p>We've have added a new show to our library:</p>
           <h3 style="color: #F84565;">"${movieTitle}"</h3>
-          <p>Visit our website</p>
-          <a href="rjp-quickshow.netlify.app">rjp-quickshow.netlify.app<a>
           <br />
-          <p>Thanks, <br/> RJP's QuickShow Team</p>
+          <p>Thanks, <br/> CseWorld's Quickshow Team</p>
         </div>
       `;
 

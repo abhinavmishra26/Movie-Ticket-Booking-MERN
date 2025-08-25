@@ -9,6 +9,5 @@ showRouter.post("/add",addShow);
 showRouter.get("/all",getShows);
 showRouter.get("/:movieId",getShow);
 
-// showRouter.get("/trailer/",getMovieTrailer);
 
 export default showRouter;
