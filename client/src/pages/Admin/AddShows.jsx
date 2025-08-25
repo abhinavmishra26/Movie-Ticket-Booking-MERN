@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { dummyBookingData, dummyShowsData } from '../../assets/assets';
 import Loading from '../../Components/Loading';
 import Title from '../../Components/Title';
 import { CheckIcon, DeleteIcon, StarIcon } from 'lucide-react';

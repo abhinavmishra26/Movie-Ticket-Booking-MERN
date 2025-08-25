@@ -1,47 +1,4 @@
-// import axios from 'axios';
-// import React, { useEffect, useState } from 'react'
-// import Loading from '../Components/Loading';
-// import { useAppContext } from '../context/AppProvider';
-// import { useParams } from 'react-router-dom';
 
-// const MovieImages = () => {
-//     const {axios,getToken,image_base_url}=useAppContext();
-//     const [images,setImages]=useState(null);
-//     const {id}=useParams();
-
-//     const getImages=async()=>{
-//         try{
-//             const {data}=await axios.get(`/api/show/${id}`,{
-//         headers:{
-//           Authorization:`Bearer ${await getToken()}`
-//         }
-//       })
-//        setImages({MovieImage:data.Images})
-//     }
-//         catch(error){
-//             console.log(error);
-//         }
-//     }
-
-//   useEffect(()=>{
-//     getImages()
-
-//   },[])
-//   return images?(
-//     <div className='flex flex-wrap' >
-//        {
-//           images.MovieImage.backdrops.map((item,ind)=>(
-//             <div>
-//               <img src={image_base_url+item.file_path} className='w-[600px] h-74' ></img>
-//               </div>
-//           ))
-//         }
-//     </div>
-//   ):
-//   <Loading/>
-// }
-
-// export default MovieImages
 import React, { useEffect, useState } from 'react';
 import Loading from '../Components/Loading';
 import { useAppContext } from '../context/AppProvider';
