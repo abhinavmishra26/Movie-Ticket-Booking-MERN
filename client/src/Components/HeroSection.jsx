@@ -30,7 +30,7 @@ const HeroSection = () => {
       <div className='h-screen w-screen max-md:bg-center max-md:bg-cover bg-cover bg-center flex items-center '
       style={{ backgroundImage: `url(${backgroundImages[bgIndex]})` }}
       >
-      <div className='w-[420px] md:w-[1080px]  md:left-38 max-md:left-8 relative top-4'>
+      <div className='w-[420px]  md:w-[1080px]  md:left-38 max-md:left-5 relative top-4'>
       <img src={assets.marvelLogo}  className='mb-4'></img>
       <h1 className=' text-5xl md:text-7xl  font-semibold mb-4'><span className='text-4xl '>Forget the hassle of long ticket counters..</span></h1>
       <h1 className='text-6xl mb-6 font-semibold'>Tap to Book.</h1>
@@ -39,7 +39,7 @@ const HeroSection = () => {
       <Calendar1Icon className='' />2008
       <Clock10Icon className='text-2xl'/>2h 8m
       </div>
-      <p className='w-[700px]'>“Book tickets for the latest blockbusters and timeless classics in just a few seconds. Choose your cinema, pick your seats, and enjoy a seamless movie-going experience — anytime, anywhere.”
+      <p className='w-[420px] md:w-[700px]'>“Book tickets for the latest blockbusters and timeless classics in just a few seconds. Choose your cinema, pick your seats, and enjoy a seamless movie-going experience — anytime, anywhere.”
 
 </p>
 <button className=' flex  justify-center  items-center w-38 bg-red-500 h-10 cursor-pointer hover:bg-red-400 rounded py mt-4 font-semibold' onClick={()=>navigate("/movies")}>Explore Movies

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Loading from '../Components/Loading';
 import { useAppContext } from '../context/AppProvider';
@@ -35,10 +34,12 @@ const MovieImages = () => {
   };
 
   return images ? (
-    <div className="px-36 py-24">
-      <h2 className="text-2xl font-bold mb-6 text-center">Movie Gallery</h2>
+    <div className="px-4 sm:px-8 md:px-16 lg:px-36 py-12 sm:py-16 md:py-20 lg:py-24">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-center">
+        Movie Gallery
+      </h2>
 
-      <div className="grid grid-cols-6 auto-rows-[200px] gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 auto-rows-[150px] sm:auto-rows-[180px] md:auto-rows-[200px] gap-3 sm:gap-4">
         {images.MovieImage.backdrops.map((item, index) => (
           <div
             key={index}
