@@ -28,7 +28,7 @@ app.use(express.json())
 app.use(cors({
     origin: [
     "http://localhost:5173",
-    "https://movie-project-app2.netlify.app"
+    "https://jovial-baklava-8aa892.netlify.app"
   ],
   credentials: true
 }))
