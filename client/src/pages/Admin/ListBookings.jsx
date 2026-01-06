@@ -51,10 +51,10 @@ const ListBookings = () => {
                 key={index}
                 className="text-sm px-4 bg-primary/8 text-gray-200 even:bg-primary/16 border border-primary/10"
               >
-                <td className="p-2">{booking.user.name}</td>
-                <td className="p-2">{booking.show.movie.title}</td>
-                <td className="p-2">{dateFormate(booking.show.showDateTime)}</td>
-                <td className="p-2">{booking.bookedSeats.length}</td>
+                <td className="p-2">{booking.user?.name}</td>
+                <td className="p-2">{booking.show.movie?.title}</td>
+                <td className="p-2">{dateFormate(booking.show?.showDateTime)}</td>
+                <td className="p-2">{booking.bookedSeats?.length}</td>
                 <td className="p-2">
                   {currency} {booking.amount}
                 </td>

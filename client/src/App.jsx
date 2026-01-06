@@ -20,6 +20,7 @@ import { SignIn } from '@clerk/clerk-react';
 import Loading from './Components/Loading';
 import Upcoming from './pages/Upcoming';
 import MovieImages from './pages/MovieImages';
+import UpcomingMovieDetails from './pages/UpcomingMovieDetails';
 
 const App = () => {
   const isAdmin=useLocation().pathname.startsWith("/admin");
@@ -33,6 +34,7 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
          <Route path='/movies' element={<Movies/>}/>
          <Route path='/upcoming' element={<Upcoming/>}/>
+          <Route path='/upcoming/:id' element={<UpcomingMovieDetails/>} />
           <Route path='/movies/:id' element={<MovieDetails/>}/>
           <Route path='/movies/:id/images' element={<MovieImages/>}/>
            <Route path='/movies/:id/:date' element={<SeatLayout/>}/>
@@ -48,7 +50,6 @@ const App = () => {
            <Route path='add-shows'element={<AddShows/>}/>
            <Route path='list-bookings' element={<ListBookings/>}/>
            <Route path='list-shows' element={<ListShows/>}/>
-
            </Route>
       </Routes>
       {!isAdmin &&  <Footer/>}

@@ -60,6 +60,7 @@ useEffect(() => {
   console.log("ID changed to", id);
   getShow();
 }, [id]);
+console.log(show);
 
 
   return show? (
@@ -113,7 +114,7 @@ useEffect(() => {
       <p id='trailer' className='text-gray-300 font-medium text-lg max-w-[969px] mx-auto' >Trailer</p>
         <div className='relative mt-6 md:px-0'>
             <BlurCircle top='100px' right='-100px' />
-            <ReactPlayer className='mx-auto max-w-full' src={`https://www.youtube.com/watch?v=${show.trailer}`} controls={false} width="960px" height="540px" />   
+            <ReactPlayer className='mx-auto max-w-full' src={`https://www.youtube.com/watch?v=${show.trailer}`} controls={false} width="1200px" height="600px" />   
         </div>
         <div className='flex justify-center mb-5'>
         <button onClick={()=>(scrollTo(0,0),navigate("/movies"))}className='w-34 bg-red-500 rounded-md  mt-18 h-10 cursor-pointer hover:bg-red-400'>Show More</button>

@@ -87,6 +87,8 @@ export const AppProvider=({children})=>{
              console.error(error);
         }
     }
+
+
     useEffect(()=>{
         fetchShows();
     },[])

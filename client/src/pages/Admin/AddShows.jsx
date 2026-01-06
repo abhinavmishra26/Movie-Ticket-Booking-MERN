@@ -155,7 +155,7 @@ const AddShows = () => {
     <label className='text-sm font-medium  '>Select Date and Time</label>
     <div className='w-86  flex h-12 mt-2 items-center justify-between px-1 border border-gray-500 rounded-lg pl-2 '>
       <input type='datetime-local' value={dateTimeInput} onChange={(e)=>setDateTimeInput(e.target.value)} className='outline-none'></input>
-      <button onClick={handleDateTimeAdd} className='w-24 h-8 cursor-pointer bg-primary rounded-lg px-1'>Add Time</button>
+      <button onClick={handleDateTimeAdd} className='w-24 h-8 cursor-pointer bg-red-500 hover:bg-red-400 rounded-lg px-1'>Add Time</button>
     </div>
    </div>
    <div className='mt-6 mb-6'>
@@ -180,7 +180,7 @@ const AddShows = () => {
         </div>
     )}
    </div>
-   <button onClick={handleSubmit} disabled={addingShow} className='w-36 h-10 bg-primary cursor-pointer rounded-sm'>Add Show</button>
+   <button onClick={handleSubmit} disabled={addingShow} className='w-36 h-10 bg-red-500  rounded-sm cursor-pointer hover:bg-red-400'>Add Show</button>
    </div>
   ):(
     <div className='flex justify-center items-center'>
