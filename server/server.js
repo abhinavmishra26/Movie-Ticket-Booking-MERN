@@ -25,7 +25,10 @@ app.use(
 
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: "movie-project-app2.netlify.app",
+  credentials: true
+}))
 app.use(clerkMiddleware())
 
 
