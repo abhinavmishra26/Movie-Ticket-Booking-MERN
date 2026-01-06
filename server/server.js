@@ -26,7 +26,10 @@ app.use(
 
 app.use(express.json())
 app.use(cors({
-  origin: "movie-project-app2.netlify.app",
+    origin: [
+    "http://localhost:5173",
+    "https://movie-project-app2.netlify.app"
+  ],
   credentials: true
 }))
 app.use(clerkMiddleware())
@@ -43,6 +46,7 @@ app.use("/api/admin",adminRouter)
 app.use("/api/user",userRouter)
 
 
-app.listen(port,()=>{
-    console.log(`Server is runnning at port ${port} `)
-})
+// app.listen(port,()=>{
+//     console.log(`Server is runnning at port ${port} `)
+// })
+export default app;
