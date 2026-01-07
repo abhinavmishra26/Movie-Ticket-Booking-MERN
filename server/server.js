@@ -46,7 +46,7 @@ app.use("/api/admin",adminRouter)
 app.use("/api/user",userRouter)
 
 
-// app.listen(port,()=>{
-//     console.log(`Server is runnning at port ${port} `)
-// })
-export default app;
+app.listen(port,()=>{
+    console.log(`Server is runnning at port ${port} `)
+})
+// export default app;
