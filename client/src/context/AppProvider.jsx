@@ -4,14 +4,12 @@ import { useAuth, useUser } from "@clerk/clerk-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-// axios.defaults.baseURL=import.meta.env.VITE_BASE_URL
-axios.defaults.baseURL="https://movie-project-server-zeta.vercel.app";
+axios.defaults.baseURL=import.meta.env.VITE_BASE_URL
+// axios.defaults.baseURL="https://movie-project-server-zeta.vercel.app";
 
 export const AppContext=createContext();
 
 export const AppProvider=({children})=>{
-
-  
     const [isAdmin,setIsAdmin]=useState(false)
     const [shows,setShows]=useState([]);
     const [favoriteMovies,setFavoriteMovies]=useState([])
@@ -23,8 +21,7 @@ export const AppProvider=({children})=>{
     const {getToken}=useAuth();
     const location=useLocation();
     const navigate=useNavigate();
-   
-    
+
     const fetchIsAdmin=async()=>{
         try{
             const {data}=await axios.get("/api/admin/is-admin",
@@ -61,6 +58,7 @@ export const AppProvider=({children})=>{
 
     const fetchUpcomingShows = async () => {
   try {
+
     const { data } = await axios.get("/api/show/upcoming-movies");
     if (data.success) {
       setUpcomingShows(data.movies);
