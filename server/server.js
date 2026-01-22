@@ -28,7 +28,7 @@ app.use(express.json())
 app.use(cors({
     origin: [
     "http://localhost:5173",
-    "https://jovial-baklava-8aa892.netlify.app"
+    "https://quick-show-ticket1.vercel.app"
   ],
   credentials: true
 }))
