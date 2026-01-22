@@ -6,8 +6,10 @@ import { useAppContext } from '../../context/AppProvider'
 import Loading from '../../Components/Loading'
 
 
+
+
 const Layout = () => {
-  const {isadmin , fetchIsAdmin}=useAppContext();
+  const {isAdmin , fetchIsAdmin}=useAppContext();
 
   useEffect(()=>{
     fetchIsAdmin();

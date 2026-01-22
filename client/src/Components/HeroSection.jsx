@@ -27,30 +27,87 @@ const HeroSection = () => {
 
 
   return (
-      <div className='h-screen w-screen max-md:bg-center max-md:bg-cover bg-cover bg-center flex items-center '
-      style={{ backgroundImage: `url(${backgroundImages[bgIndex]})` }}
+  <div
+    className="
+      h-screen w-screen
+      bg-cover bg-center
+      flex items-center
+      px-4 sm:px-6
+      max-md:bg-center max-md:bg-cover
+    "
+    style={{ backgroundImage: `url(${backgroundImages[bgIndex]})` }}
+  >
+    <div
+      className="
+        w-full max-w-[420px]
+        md:max-w-[1080px]
+        relative
+        top-6 md:top-4
+        md:left-38
+      "
+    >
+      
+      <img
+        src={assets.marvelLogo}
+        className="mb-4 w-32 sm:w-40 md:w-auto"
+        alt="Marvel"
+      />
+
+      <h1 className="font-semibold mb-2 leading-tight">
+        <span className="block text-2xl sm:text-3xl md:text-4xl text-gray-200">
+          Forget the hassle of long ticket counters..
+        </span>
+      </h1>
+
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold mb-4">
+        Tap to Book.
+      </h1>
+
+    
+      <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm mb-4 text-gray-300">
+        <p>Action | Adventure | Sci-Fi</p>
+        <span className="flex items-center gap-1">
+          <Calendar1Icon className="w-4 h-4" /> 2008
+        </span>
+        <span className="flex items-center gap-1">
+          <Clock10Icon className="w-4 h-4" /> 2h 8m
+        </span>
+      </div>
+
+     
+      <p
+        className="
+          text-sm sm:text-base
+          leading-relaxed
+          text-gray-200
+          mb-6
+          max-w-full md:max-w-[700px]
+        "
       >
-      <div className='w-[420px]  md:w-[1080px]  md:left-38 max-md:left-5 relative top-4'>
-      <img src={assets.marvelLogo}  className='mb-4'></img>
-      <h1 className=' text-5xl md:text-7xl  font-semibold mb-4'><span className='text-4xl '>Forget the hassle of long ticket counters..</span></h1>
-      <h1 className='text-6xl mb-6 font-semibold'>Tap to Book.</h1>
-      <div className='flex gap-3 font-thin text-sm'>
-      <p className='mb-6'>Action | Adventure |Sci-Fi</p>
-      <Calendar1Icon className='' />2008
-      <Clock10Icon className='text-2xl'/>2h 8m
-      </div>
-      <p className='w-[420px] md:w-[700px]'>“Book tickets for the latest blockbusters and timeless classics in just a few seconds. Choose your cinema, pick your seats, and enjoy a seamless movie-going experience — anytime, anywhere.”
+        “Book tickets for the latest blockbusters and timeless classics in just a
+        few seconds. Choose your cinema, pick your seats, and enjoy a seamless
+        movie-going experience — anytime, anywhere.”
+      </p>
 
-</p>
-<button className=' flex  justify-center  items-center w-38 bg-red-500 h-10 cursor-pointer hover:bg-red-400 rounded py mt-4 font-semibold' onClick={()=>navigate("/movies")}>Explore Movies
-  <ArrowRight className='w-5'/>
-</button>
-      </div>
-
-      
+    
+      <button
+        className="
+          flex items-center gap-2
+          bg-red-500 hover:bg-red-400
+          h-10 px-6
+          rounded-md
+          font-semibold
+          text-sm sm:text-base
+        "
+        onClick={() => navigate("/movies")}
+      >
+        Explore Movies
+        <ArrowRight className="w-5" />
+      </button>
     </div>
-      
-  )
+  </div>
+);
+
 }
 
 export  default HeroSection;

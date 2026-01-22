@@ -145,19 +145,45 @@ const AddShows = () => {
    </div>
    </div>
    <div>
-    <label className='text-sm  font-medium'>Show Price</label>
-    <div className='w-68  flex h-12 items-center px-3 border mt-2 border-gray-500 rounded-lg '>
-      <p className='text-xl text-gray-400 '>{currency}</p>
-      <input min={0} type="number" value={showPrice} onChange={(e)=>setShowPrice(e.target.value)} placeholder='Enter Show Price' className='outline-none ml-2'  ></input>
-    </div>
-   </div>
-   <div className='mt-6'>
-    <label className='text-sm font-medium  '>Select Date and Time</label>
-    <div className='w-86  flex h-12 mt-2 items-center justify-between px-1 border border-gray-500 rounded-lg pl-2 '>
-      <input type='datetime-local' value={dateTimeInput} onChange={(e)=>setDateTimeInput(e.target.value)} className='outline-none'></input>
-      <button onClick={handleDateTimeAdd} className='w-24 h-8 cursor-pointer bg-red-500 hover:bg-red-400 rounded-lg px-1'>Add Time</button>
-    </div>
-   </div>
+  <label className='text-sm font-medium block mb-1'>Show Price</label>
+
+  <div className='w-full sm:w-68 flex h-11 sm:h-12 items-center px-3 border mt-2 border-gray-500 rounded-lg'>
+    <p className='text-lg sm:text-xl text-gray-400'>{currency}</p>
+
+    <input
+      min={0}
+      type='number'
+      value={showPrice}
+      onChange={(e)=>setShowPrice(e.target.value)}
+      placeholder='Enter Show Price'
+      className='outline-none ml-2 w-full bg-transparent text-sm sm:text-base'
+    />
+  </div>
+</div>
+
+  <div className='mt-6'>
+  <label className='text-sm font-medium block mb-1'>
+    Select Date and Time
+  </label>
+
+  <div className='w-full sm:w-86 flex h-auto sm:h-12 mt-2 items-center gap-2 sm:gap-0 justify-between px-2 border border-gray-500 rounded-lg'>
+
+    <input
+      type='datetime-local'
+      value={dateTimeInput}
+      onChange={(e)=>setDateTimeInput(e.target.value)}
+      className='outline-none bg-transparent w-full sm:w-auto text-sm'
+    />
+
+    <button
+      onClick={handleDateTimeAdd}
+      className='w-full  sm:w-24 h-9 sm:h-8 cursor-pointer bg-red-500 hover:bg-red-400 rounded-lg text-sm'
+    >
+      Add Time
+    </button>
+
+  </div>
+</div>
    <div className='mt-6 mb-6'>
     {Object.keys(dateTimeSelection).length>0 && (
       <div>

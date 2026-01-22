@@ -27,8 +27,7 @@ app.use(
 app.use(express.json())
 app.use(cors({
     origin: [
-    "http://localhost:5173",
-    "https://quick-show-ticket1.vercel.app"
+    "http://localhost:5173"
   ],
   credentials: true
 }))
@@ -49,4 +48,3 @@ app.use("/api/user",userRouter)
 app.listen(port,()=>{
     console.log(`Server is runnning at port ${port} `)
 })
-// export default app;

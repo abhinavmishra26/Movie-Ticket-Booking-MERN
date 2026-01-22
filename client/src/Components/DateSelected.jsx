@@ -18,7 +18,7 @@ const DateSelected = ({dateTime,id}) => {
     }
 
   return (
-    <div id='dateSelect' className='mt-36 px-6 md:px-0'>
+    <div id='dateSelect' className='mt-36 px-6 md:px-0 '>
         <BlurCircle top="940px" left="70px"/>
       <div  className='  md:h-46  px-8 lg:px-5 py-8 rounded-lg bg-primary/10 border-primary/20 border-2 '>
 
