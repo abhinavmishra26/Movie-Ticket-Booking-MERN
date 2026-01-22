@@ -19,7 +19,6 @@ const Favorite = () => {
         )}
         <BlurCircle top='680px 'right='50px'/>
       </div>
-      
     </div>):(
       <div className='w-full mt-44 px-46 flex justify-center items-center'>
       <h1 className='text-4xl text-gray-400'>No Favorite Movie Available</h1>
@@ -30,3 +29,4 @@ const Favorite = () => {
 }
 
 export default Favorite
+

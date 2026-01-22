@@ -3,7 +3,6 @@ import AdminNavbar from '../../Components/AdminNavbar'
 import AdminSidebar from '../../Components/AdminSidebar'
 import { Outlet } from 'react-router-dom'
 import { useAppContext } from '../../context/AppProvider'
-import { isAdmin } from '../../../../server/controllers/adminController'
 import Loading from '../../Components/Loading'
 
 
