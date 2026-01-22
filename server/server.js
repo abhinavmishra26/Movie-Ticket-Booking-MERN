@@ -27,7 +27,8 @@ app.use(
 app.use(express.json())
 app.use(cors({
     origin: [
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://quick-show-ticket.vercel.app"
   ],
   credentials: true
 }))
