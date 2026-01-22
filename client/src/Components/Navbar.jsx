@@ -71,7 +71,7 @@ const Navbar = () => {
 
    
       <div
-        className={`fixed top-0 left-0 h-screen w-64 bg-gray-900/95 backdrop-blur-md shadow-lg transform 
+        className={`fixed top-0 left-0 h-screen w-64 bg-black backdrop-blur-md shadow-lg transform 
         ${isOpen ? "translate-x-0" : "-translate-x-full"} 
         transition-transform duration-300 flex flex-col items-start p-6 space-y-6 text-white`}
       >
