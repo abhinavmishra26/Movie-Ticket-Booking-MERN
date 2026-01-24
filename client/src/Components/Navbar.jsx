@@ -17,7 +17,6 @@ const Navbar = () => {
     <div className="w-screen h-18 fixed top-0 left-0 z-50 flex justify-between items-center px-6 
      backdrop-blur-md shadow-lg border-b border-primary/30">
       
-   
       <div>
         <Link to="/">
           <img src={assets.movieTicket} className="w-16 h-16 hover:scale-105 transition-transform" alt="Logo" />
